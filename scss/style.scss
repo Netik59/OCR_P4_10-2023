@@ -1,5 +1,179 @@
+/************************Main settings****************************/
+
 @import "libs/reset.scss";
 
-body {
-    background-color: black;
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
+
+:root {
+    /* Colors*/
+    --main-color: #9356DC;
+    --main-bg-color: #F3F3F3;
+    --card-hover-color: #99E2D0;
+    --bg-gradient-color : linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
+    --bg-gradient-color-hover : linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/************************Header****************************/
+
+header {
+    h1 {
+        font-weight: 400;
+        height: 63px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Shrikhand', serif;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+/************************Location****************************/
+
+.location .fa-location-dot{
+    width: 12px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.location {
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #353535;
+}
+
+/************************Introduction****************************/
+.intro {
+    background-color: var(--main-bg-color);
+    &__title {
+        text-align: center;
+        padding: 40px 44px 10px 44px;
+    }
+    &__text {
+        text-align: center;
+        padding: 0 18px 30px 18px;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 45px;
+
+    button{
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        background: linear-gradient(0deg, #9456DC, #FF79DB);
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        border: none;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(180deg, rgba(255,121,218,1) 100%, rgba(147,86,220,1) 100%, rgba(255,255,255,1) 15%);
+        }
+    }   
+}
+
+/************************Functioning****************************/
+
+.functioning {
+    padding-bottom: 40px;
+    &__title {
+        padding: 40px 0 30px 18px;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 72px;
+        border-radius: 20px;
+        background-color: #F6F6F6;
+        margin: 0 18px 25px 30px;
+        position: relative;
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        h2 {
+            margin-left: 20px;
+        }
+        .number {
+            position: absolute;
+            left: -61px;
+            top: 0;
+            background-color: initial;
+            box-shadow: none;
+            h2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                background-color: var(--main-color);
+                border-radius: 50%;
+                padding: 10px;
+                color: white;
+            }
+        }
+    }
+}
+
+/************************Restaurants****************************/
+
+.restaurant {
+    background-color: var(--main-bg-color);
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__title {
+        padding: 50px 0 20px 20px;
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        margin: 20px;
+        .card {
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+            height: 100%;
+            img {
+                border-radius: 15px;
+                
+            }
+        }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 85px;
+        }
+    }
+}
+
+
+

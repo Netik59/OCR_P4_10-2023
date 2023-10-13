@@ -1,3 +1,4 @@
+/************************Main settings****************************/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -43,8 +44,168 @@ td, th {
   padding: 0;
 }
 
-body {
-  background-color: black;
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors*/
+  --main-color: #9356DC;
+  --main-bg-color: #F3F3F3;
+  --card-hover-color: #99E2D0;
+  --bg-gradient-color: linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
+  --bg-gradient-color-hover: linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/************************Header****************************/
+header h1 {
+  font-weight: 400;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand", serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+/************************Location****************************/
+.location .fa-location-dot {
+  width: 12px;
+  height: 16px;
+  margin-right: 20px;
+}
+
+.location {
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #353535;
+}
+
+/************************Introduction****************************/
+.intro {
+  background-color: var(--main-bg-color);
+}
+.intro__title {
+  text-align: center;
+  padding: 40px 44px 10px 44px;
+}
+.intro__text {
+  text-align: center;
+  padding: 0 18px 30px 18px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 45px;
+}
+.buttons button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9456DC, #FF79DB);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.buttons button:hover {
+  background: linear-gradient(180deg, rgb(255, 121, 218) 100%, rgb(147, 86, 220) 100%, rgb(255, 255, 255) 15%);
+}
+
+/************************Functioning****************************/
+.functioning {
+  padding-bottom: 40px;
+}
+.functioning__title {
+  padding: 40px 0 30px 18px;
+}
+.functioning div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  margin: 0 18px 25px 30px;
+  position: relative;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.functioning div h2 {
+  margin-left: 20px;
+}
+.functioning div .number {
+  position: absolute;
+  left: -61px;
+  top: 0;
+  background-color: initial;
+  box-shadow: none;
+}
+.functioning div .number h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+}
+
+/************************Restaurants****************************/
+.restaurant {
+  background-color: var(--main-bg-color);
+}
+.restaurant h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.restaurant__title {
+  padding: 50px 0 20px 20px;
+}
+.restaurant a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+.restaurant a .card {
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.restaurant a .card img {
+  border-radius: 15px;
+}
+.restaurant a .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85px;
 }
 
 /*# sourceMappingURL=style.css.map */

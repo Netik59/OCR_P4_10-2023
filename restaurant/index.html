@@ -3,81 +3,85 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Inter:wght@900&display=swap" rel="stylesheet">
-		<title>Riding Cities</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+		<link
+      		rel="stylesheet"
+      		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      		crossorigin="anonymous"
+      		referrerpolicy="no-referrer"
+    	/>
+		<script
+      		src="https://kit.fontawesome.com/1146e48250.js"
+      		crossorigin="anonymous"
+    	></script>
+		<title>Ohmyfood</title>
 	</head>
 	<body>
-		<div class="container">
+		<div class="main-container">
 			<header>
-				<img src="images/header.png" alt="skateboard sur un sol goudronné">
-				<div class="headerTextContent">
-					<h1>RIDING CITIES</h1>
-				</div>
+				<h1>ohmyfood</h1>
 			</header>
 			<main>
-				<section>
-					<h2>La mission de l'asso</h2>
-					<div class="directionRow">
-						<article>
-							<h3>Promouvoir</h3>
-							<p>L'asso regroupe des passionnés de glisse et plus particulièrement de skateboard qui œuvrent pour la promotion de ce sport au niveau régional.</p>
-						</article>
-						<article>
-							<h3>Transmettre</h3>
-							<p>Nous proposons des cours pour enfants, ados et adultes. Nous intervenons également dans les écoles pour faire découvrir le skate aux plus jeunes.</p>
-						</article>
-						<article>
-							<h3>Entraîner</h3>
-							<p>Nous accompagnons nos membres sur les compétitions en les préparant physiquement à donner le meilleur d'eux-mêmes.</p>
-						</article>
-						<article>
-							<h3>Fédérer</h3>
-							<p>L'asso organise tout au long de l'année des évènements autour du skate pour réunir toujours plus de monde autour de cette pratique.</p>
-						</article>
+				<div class="location">
+					<i class="fa-solid fa-location-dot"></i>
+					<h2>Paris, Belleville</h2>
+				</div>
+				<section class="intro">
+					<h1 class="intro__title">Réservez le menu qui vous convient</h1>
+					<p class="intro__text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+					<div class="buttons">
+						<button>
+							Explorer nos restaurants
+						</button>
 					</div>
 				</section>
-				
-				
-				
-				<section class="sectionLinearGradientBackground">
-					<div class="whiteContentSection">
-						<h2>Les membres fondateurs</h2>
+				<section class="functioning">
+					<h1 class="functioning__title">Fonctionnement</h1>
+
+					<div>
+						<div class="number">
+							<h2>1</h2>
+						</div>
+						<i class="fa-solid fa-mobile-screen-button"></i>
+						<h2>Choisissez un restaurant</h2>
 					</div>
-					<div class="directionRow">
-						<article>
-							<img src="images/soraya.png" alt="Soraya, spécialiste en longboarding"/>
-							<div class="whiteContentSection textCenter">
-								<h3>Soraya</h3>
-								<p>Longboard</p>
-							</div>
-						</article>
-						<article>
-							<img src="images/marc.png" alt="Marc, spécialiste en street boarding"/>
-							<div class="whiteContentSection textCenter">
-								<h3>Marc</h3>
-								<p>Street</p>
-							</div>
-						</article>
-						<article>
-							<img src="images/pedro.png" alt="Pedro, spécialiste en pool boarding"/>
-							<div class="whiteContentSection textCenter">
-								<h3>Pedro</h3>
-								<p>Pool</p>
-							</div>
-						</article>
+					<div>
+						<div class="number">
+							<h2>2</h2>
+						</div>
+						<i class="fa-solid fa-list-ul"></i>
+						<h2>Composez votre menut</h2>
+					</div>
+					<div>
+						<div class="number">
+							<h2>3</h2>
+						</div>
+						<i class="fa-solid fa-store"></i>
+						<h2>Dégustez au restaurant</h2>
 					</div>
 				</section>
-				<section class="sectionLightGreyBackground">
-					<h2>Découvrez nos cours</h2>
-					<div class="directionColumn">
-						<a class="button buttonMainColor buttonRounded buttonHighlight" href="documents/planning-adultes.pdf">Télécharger le planning de cours pour adultes</a>
-						<a class="button buttonSecondColor buttonRounded buttonHighlight" href="documents/planning-enfants.pdf">Télécharger le planning de cours pour enfants</a>
+				<section class="restaurant">
+					<h1 class="restaurant__title">Restaurant</h1>
+					<div>
+						<a href="#">
+							<article class="card">
+							  	<img
+									src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+									alt="Image illustrant le restaurant La palette du goût"/>
+								<h2 class="card-title">La palette du goût</h2>
+								<p class="card-subtitle">Ménilmontant</p>
+							</article>
+						</a>
 					</div>
 				</section>
 			</main>
+			<footer>
+
+			</footer>
 		</div>
 	</body>
 </html>
