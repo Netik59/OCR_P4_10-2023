@@ -1,0 +1,128 @@
+/************************Main settings****************************/
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors*/
+  --main-color: #9356DC;
+  --main-bg-color: #F3F3F3;
+  --card-hover-color: #99E2D0;
+  --bg-gradient-color: linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
+  --bg-gradient-color-hover: linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/************************Header****************************/
+header h1 {
+  font-weight: 400;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand", serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+/************************Footer****************************/
+.footer {
+  background-color: #353535;
+  padding: 25px 0 15px 20px;
+}
+.footer h1 {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.footer__links {
+  list-style-type: none;
+  padding-left: 1px;
+}
+.footer__links--li {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer__links--li .fa-utensils, .footer__links--li .fa-handshake-angle {
+  height: 13px;
+  width: 11px;
+  margin-right: 18px;
+  color: white;
+}
+.footer__links--li:nth-child(-n+2) a {
+  font-weight: 500;
+}
+.footer__links--li a {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */

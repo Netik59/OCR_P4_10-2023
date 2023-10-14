@@ -1,0 +1,120 @@
+@charset "UTF-8";
+:root {
+  /* Colors*/
+  --menu-bg-color: #F6F6F6;
+  --card-hover-color: #99E2D0;
+  --bg-gradient-color: linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
+  --bg-gradient-color-hover: linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+}
+
+.header {
+  position: relative;
+}
+.header .fa-arrow-left {
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 20px;
+}
+
+.intro {
+  position: relative;
+}
+.intro img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.intro__title {
+  position: absolute;
+  bottom: -50px;
+  background-color: var(--menu-bg-color);
+  width: 100%;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+}
+.intro__title h1 {
+  padding: 28px 0 30px 20px;
+  font-weight: 400;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  color: #101010;
+}
+.intro__title .fa-heart {
+  position: absolute;
+  top: 36px;
+  right: 38px;
+  font-size: 22px;
+  background-image: linear-gradient(0deg, #9456DC, #FF79DB);
+  -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
+  background-clip: text;
+  color: transparent;
+}
+
+.menu {
+  padding: 50px 15px 15px 15px;
+  padding-left: 15px;
+  background-color: var(--menu-bg-color);
+}
+.menu p {
+  font-size: 15px;
+}
+.menu h2 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.menu h3 {
+  font-size: 18px;
+}
+.menu__entrees--text {
+  border-bottom: 3px solid var(--card-hover-color);
+  width: 40px;
+  padding-bottom: 5px;
+}
+.menu__text {
+  border-bottom: 3px solid var(--card-hover-color);
+  width: 40px;
+  padding-bottom: 5px;
+  padding-top: 35px;
+}
+.menu .card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  height: 72px;
+  background-color: white;
+}
+.menu .card h3 {
+  padding-bottom: 5px;
+  margin-left: 12px;
+}
+.menu .card div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12px;
+}
+.menu__button--command {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+.menu__button--command button {
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9456DC, #FF79DB);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.menu__button--command button:hover {
+  background: linear-gradient(180deg, rgb(255, 121, 218) 100%, rgb(147, 86, 220) 100%, rgb(255, 255, 255) 15%);
+}
+
+/*# sourceMappingURL=menu.css.map */

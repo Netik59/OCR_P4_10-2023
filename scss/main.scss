@@ -1,0 +1,94 @@
+/************************Main settings****************************/
+
+@import "libs/reset.scss";
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors*/
+    --main-color: #9356DC;
+    --main-bg-color: #F3F3F3;
+    --card-hover-color: #99E2D0;
+    --bg-gradient-color : linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
+    --bg-gradient-color-hover : linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+/************************Header****************************/
+
+.header {
+    h1 {
+        font-weight: 400;
+        height: 63px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Shrikhand', serif;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+
+/************************Footer****************************/
+
+.footer {
+    background-color:#353535;
+    padding: 25px 0 15px 20px;
+    h1 {
+        font-family: 'Shrikhand', serif;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    &__links {
+        list-style-type: none;
+        padding-left: 1px;
+        &--li {
+            display: flex;
+            margin-bottom: 10px;
+            .fa-utensils, .fa-handshake-angle {
+                height: 13px;
+                width: 11px;
+                margin-right: 18px;
+                color: white;
+            }
+            &:nth-child(-n+2) a {
+                font-weight: 500;
+              }
+            a {
+                color: white;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+

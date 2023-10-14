@@ -1,52 +1,3 @@
-/************************Main settings****************************/
-
-@import "libs/reset.scss";
-
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-}
-
-:root {
-    /* Colors*/
-    --main-color: #9356DC;
-    --main-bg-color: #F3F3F3;
-    --card-hover-color: #99E2D0;
-    --bg-gradient-color : linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
-    --bg-gradient-color-hover : linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
-
-}
-
-h1 {
-    font-weight: 700;
-    font-size: 24px;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 16px;
-}
-
-p {
-    font-weight: 300;
-    font-size: 18px;
-}
-
-/************************Header****************************/
-
-header {
-    h1 {
-        font-weight: 400;
-        height: 63px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Shrikhand', serif;
-        text-align: center;
-        font-size: 30px;
-    }
-}
-
 /************************Location****************************/
 
 .location .fa-location-dot{
@@ -116,7 +67,7 @@ header {
         margin: 0 18px 25px 30px;
         position: relative;
         box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-        h2 {
+        h3 {
             margin-left: 20px;
         }
         .number {
@@ -125,7 +76,7 @@ header {
             top: 0;
             background-color: initial;
             box-shadow: none;
-            h2 {
+            h3 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -137,6 +88,12 @@ header {
                 color: white;
             }
         }
+        .fa-mobile-screen-button, .fa-list-ul{
+            color: #7E7E7E;
+        }
+        .fa-store {
+            color: var(--main-color);
+        }
     }
 }
 
@@ -144,36 +101,68 @@ header {
 
 .restaurant {
     background-color: var(--main-bg-color);
-    h2 {
+    padding-bottom: 45px;
+    h3 {
         font-size: 18px;
         font-weight: 700;
     }
     &__title {
-        padding: 50px 0 20px 20px;
+        padding: 50px 0 0 20px;
     }
     a {
-        display: block;
-        text-decoration: none;
         color: black;
         margin: 20px;
+        background-color: white;
+        border-radius: 15px;
         .card {
-            border-radius: 15px;
-            padding: 5px;
+            position: relative;
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
             height: 100%;
+            height: 251px;
+            border-radius: 15px;
             img {
-                border-radius: 15px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                object-fit: cover;
+                height: 180px;
+                width: 100%;
                 
             }
+            &__content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 65px;
+                margin-left: 15px;
+                &--title {
+                    margin-bottom: 3px;
+                }
+                .fa-heart {
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+                    font-size: 22px;
+                    background-image: linear-gradient(0deg, #9456DC, #FF79DB);
+                    -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
+                    background-clip: text;
+                    color: transparent;
+                }
+            }
+            &__new {
+                position: absolute;
+                top: 13px;
+                right: 0;
+                margin-right: 13px;
+                color: #008766;
+                width: 80px;
+                height: 29px;
+                background-color: #99E2D0;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 85px;
-        }
+        
     }
 }
-
-
-
