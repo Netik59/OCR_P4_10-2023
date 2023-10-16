@@ -37,16 +37,22 @@
   width: 218px;
   height: 50px;
   border-radius: 25px;
-  background: linear-gradient(0deg, #9456DC, #FF79DB);
+  background: var(--main-gradient-color);
   color: white;
   font-weight: 500;
   font-size: 16px;
   border: none;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  transition-duration: 500ms;
   cursor: pointer;
 }
 .buttons button:hover {
-  background: linear-gradient(180deg, rgb(255, 121, 218) 100%, rgb(147, 86, 220) 100%, rgb(255, 255, 255) 15%);
+  background: var(--hover-gradient-color);
+  box-shadow: 0 5px 26px 0 rgba(0, 0, 0, 0.5);
+}
+.buttons button:not(:hover) {
+  background: var(--main-gradient-color);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 /************************Functioning****************************/
@@ -58,7 +64,6 @@
 }
 .functioning div {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 72px;
   border-radius: 20px;
@@ -90,9 +95,11 @@
 }
 .functioning div .fa-mobile-screen-button, .functioning div .fa-list-ul {
   color: #7E7E7E;
+  margin-left: 60px;
 }
 .functioning div .fa-store {
   color: var(--main-color);
+  margin-left: 60px;
 }
 
 /************************Restaurants****************************/
@@ -137,16 +144,6 @@
 .restaurant a .card__content--title {
   margin-bottom: 3px;
 }
-.restaurant a .card__content .fa-heart {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  font-size: 22px;
-  background-image: linear-gradient(0deg, #9456DC, #FF79DB);
-  -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
-  background-clip: text;
-  color: transparent;
-}
 .restaurant a .card__new {
   position: absolute;
   top: 13px;
@@ -160,6 +157,83 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/******************************LOADER***********************************/
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Au-dessus de tout le contenu */
+  animation: hide 3000ms forwards; /*Forwards pour que le loader reste encore transparent à la fin de l'animation*/
+}
+
+.loader {
+  font-size: 2rem;
+  perspective: 1200px;
+}
+
+.text {
+  color: white;
+  display: inline-block;
+  animation: rotate 3000ms linear;
+}
+
+.letter {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  display: inline-block;
+  transform-origin: center;
+  animation: spin 3000ms linear;
+}
+
+@keyframes rotate {
+  0%, 80% {
+    transform: rotateY(0deg);
+  }
+  25%, 65% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes hide {
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=homepage.css.map */

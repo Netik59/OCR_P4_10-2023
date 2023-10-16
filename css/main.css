@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /************************Main settings****************************/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -54,8 +55,10 @@ td, th {
   --main-color: #9356DC;
   --main-bg-color: #F3F3F3;
   --card-hover-color: #99E2D0;
-  --bg-gradient-color: linear-gradient(to bottom, #9356DC 100%, #FF79DA 100%);
-  --bg-gradient-color-hover: linear-gradient(to bottom, rgb(147, 86, 220) 100%, rgb(255, 121, 218) 100%, rgb(255, 255, 255) 15%);
+  --menu-bg-color: #F6F6F6;
+  --card-hover-color: #99E2D0;
+  --main-gradient-color: linear-gradient(0deg, #9356dc, #ff79da);
+  --hover-gradient-color: linear-gradient(0deg, #9B72D8 0%, #FF8DC6 100%);
 }
 
 h2 {
@@ -79,7 +82,7 @@ a {
 }
 
 /************************Header****************************/
-header h1 {
+.header h1 {
   font-weight: 400;
   height: 63px;
   display: flex;
@@ -123,6 +126,36 @@ header h1 {
   color: white;
   font-weight: 400;
   font-size: 16px;
+}
+
+/************************Heart animation****************************/
+.empty-heart,
+.full-heart {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  font-size: 22px;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.empty-heart {
+  opacity: 1;
+}
+
+.full-heart {
+  background-image: linear-gradient(0deg, #9456DC, #FF79DB);
+  -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+
+.heart:hover .empty-heart {
+  opacity: 0;
+}
+.heart:hover .full-heart {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
