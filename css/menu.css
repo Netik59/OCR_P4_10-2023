@@ -7,6 +7,7 @@
   margin-top: 23px;
   margin-left: 20px;
   color: #353535;
+  font-size: 20px;
 }
 
 .intro {
@@ -44,14 +45,16 @@
   background-color: var(--menu-bg-color);
 }
 .menu p {
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 400;
 }
 .menu h2 {
   font-size: 16px;
   font-weight: 300;
 }
 .menu h3 {
-  font-size: 18px;
+  font-size: 15.5px;
+  white-space: nowrap;
 }
 .menu__entrees--text {
   border-bottom: 3px solid var(--card-hover-color);
@@ -71,11 +74,13 @@
   animation: slide 500ms ease-out forwards;
 }
 .menu .card {
+  cursor: pointer;
+  position: relative;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 15px;
   height: 72px;
   background-color: white;
@@ -83,14 +88,51 @@
   transform: translateX(-150%) translateY(-30%);
   animation: slide 500ms ease-out forwards;
 }
-.menu .card h3 {
-  padding-bottom: 5px;
-  margin-left: 12px;
+.menu .card:hover .card__checked--price {
+  animation: price-anim 600ms forwards;
 }
-.menu .card div {
+.menu .card:hover .card__checked--selected {
+  animation: check-anim 600ms forwards;
+}
+.menu .card:hover p, .menu .card:hover h3 {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .card:not(:hover) .card__checked--price {
+  animation: price-anim-reverse 600ms forwards;
+}
+.menu .card:not(:hover) .card__checked--selected {
+  animation: check-anim-reverse 600ms forwards;
+}
+.menu .card__food {
   display: flex;
-  justify-content: space-between;
-  margin: 0 12px;
+  flex-direction: column;
+  margin-left: 12px;
+  gap: 5px;
+}
+.menu .card__checked {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.menu .card__checked--price {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu .card__checked--selected {
+  transform-origin: right;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  margin-left: 7px;
 }
 .menu__button--command {
   padding-top: 40px;
@@ -124,6 +166,7 @@
 }
 
 /************************ Animation plats***************************/
+/************Au chargement de la page...***********/
 @keyframes slide {
   0% {
     transform: translateX(-100%) translateY(-30%);
@@ -234,6 +277,45 @@ h2:nth-child(13),
 h2:nth-child(14),
 .menu__button--command:nth-child(14) {
   animation-delay: 3.5s;
+}
+
+/************Lors du survol des cards...***********/
+@keyframes price-anim {
+  0% {
+    transform: translateX(220%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes check-anim {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+/*Reverse*/
+@keyframes price-anim-reverse {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+@keyframes check-anim-reverse {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
