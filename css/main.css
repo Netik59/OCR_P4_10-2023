@@ -61,6 +61,17 @@ td, th {
   --hover-gradient-color: linear-gradient(0deg, #9B72D8 0%, #FF8DC6 100%);
 }
 
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.main-container {
+  max-width: 1440px;
+}
+
 h2 {
   font-weight: 700;
   font-size: 24px;
@@ -92,11 +103,24 @@ a {
   text-align: center;
   font-size: 30px;
 }
+@media (min-width: 768px) {
+  .header h1 {
+    height: 96px;
+  }
+}
 
 /************************Footer****************************/
 .footer {
   background-color: #353535;
   padding: 25px 0 15px 20px;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    padding: 45px 0 20px 20px;
+  }
 }
 .footer h1 {
   font-family: "Shrikhand", serif;
@@ -105,9 +129,21 @@ a {
   font-weight: 400;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .footer h1 {
+    padding: 0 20px 0 50px;
+    margin-bottom: 0;
+  }
+}
 .footer__links {
   list-style-type: none;
   padding-left: 1px;
+}
+@media (min-width: 768px) {
+  .footer__links {
+    display: flex;
+    gap: 15px;
+  }
 }
 .footer__links--li {
   display: flex;
@@ -121,6 +157,11 @@ a {
 }
 .footer__links--li:nth-child(-n+2) a {
   font-weight: 500;
+}
+@media (min-width: 768px) {
+  .footer__links--li:nth-child(2) a {
+    padding-right: 22px;
+  }
 }
 .footer__links--li a {
   color: white;

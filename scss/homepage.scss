@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+}
+
 /************************Location****************************/
 
 .location .fa-location-dot{
@@ -21,6 +31,9 @@
     &__title {
         text-align: center;
         padding: 40px 44px 10px 44px;
+        @media (min-width: 768px) {
+            font-size: 40px;
+        }
     }
     &__text {
         text-align: center;
@@ -59,68 +72,120 @@
 /************************Functioning****************************/
 
 .functioning {
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+    }
     padding-bottom: 40px;
+    .largeur {
+        @media (min-width: 1024px) {
+            width: 1053px;
+        }
+    }
     &__title {
         padding: 40px 0 30px 18px;
     }
-    div {
-        display: flex;
-        align-items: center;
-        height: 72px;
-        border-radius: 20px;
-        background-color: #F6F6F6;
-        margin: 0 18px 25px 30px;
-        position: relative;
-        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-        h3 {
-            margin-left: 20px;
+    &__stape {
+        @media (min-width: 1024px) {
+            display: flex;
+            justify-content: center;
         }
-        .number {
-            position: absolute;
-            left: -61px;
-            top: 0;
-            background-color: initial;
-            box-shadow: none;
-            h3 {
-                display: flex;
+
+        &--num {
+            @media (min-width: 1024px) and (max-width: 1115px) {
+                width: 270px;
                 justify-content: center;
-                align-items: center;
-                width: 24px;
-                height: 24px;
-                background-color: var(--main-color);
-                border-radius: 50%;
-                padding: 10px;
-                color: white;
+            }
+            @media (min-width: 1116px){
+                width: 335px;
+                justify-content: center;
+            }
+            display: flex;
+            align-items: center;
+            height: 72px;
+            border-radius: 20px;
+            background-color: #F6F6F6;
+            margin: 0 18px 25px 30px;
+            position: relative;
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            h3 {
+                margin-left: 20px;
+            }
+            .number {
+                position: absolute;
+                left: -34px;
+                top: 24px;
+                background-color: initial;
+                box-shadow: none;
+                h3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    background-color: var(--main-color);
+                    border-radius: 50%;
+                    padding: 10px;
+                    color: white;
+                }
+            }
+            .fa-mobile-screen-button, .fa-list-ul{
+                color: #7E7E7E;
+                margin-left: 60px;
+                @media (min-width: 1024px) {
+                    margin-left: 0;
+                }
+            }
+            .fa-store {
+                color: var(--main-color);
+                margin-left: 60px;
+                @media (min-width: 1024px) {
+                    margin-left: 0;
+                }
             }
         }
-        .fa-mobile-screen-button, .fa-list-ul{
-            color: #7E7E7E;
-            margin-left: 60px;
-        }
-        .fa-store {
-            color: var(--main-color);
-            margin-left: 60px;
-        }
     }
+    
 }
 
 /************************Restaurants****************************/
-
-.restaurant {
+.section__restaurant {
     background-color: var(--main-bg-color);
     padding-bottom: 45px;
+    display: grid;
+    @media (min-width: 1455px) {
+        padding: 0 135px 20px 135px;
+    }
+
+    @media (min-width: 1175px) and (max-width: 1454px) {
+        padding: 0 50px 20px 50px;
+    }
+
+    &--card {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
     h3 {
         font-size: 18px;
         font-weight: 700;
     }
-    &__title {
+    &--title {
         padding: 50px 0 0 20px;
+        @media (min-width: 768px) {
+            padding: 25px 0 0 45px;
+        }
     }
     a {
         color: black;
         margin: 20px;
         background-color: white;
         border-radius: 15px;
+        @media (min-width: 1080px) {
+            margin-right: 45px;
+            margin-left: 45px;
+        }
         .card {
             position: relative;
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
@@ -142,7 +207,7 @@
                 height: 65px;
                 margin-left: 15px;
                 &--title {
-                    margin-bottom: 3px;
+                    padding-left: 0;
                 }
             }
 

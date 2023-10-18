@@ -16,9 +16,21 @@
     --card-hover-color: #99E2D0;
     --main-gradient-color : linear-gradient(0deg, #9356dc, #ff79da);
     --hover-gradient-color : linear-gradient(0deg, #9B72D8 0%, #FF8DC6 100%);
+    $small-screen : 768px;
+    $medium-screen : 1024px;
 
 }
 
+body {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.main-container {
+    max-width: 1440px;
+}
 
 h2 {
     font-weight: 700;
@@ -52,6 +64,9 @@ a {
         font-family: 'Shrikhand', serif;
         text-align: center;
         font-size: 30px;
+        @media (min-width: 768px) {
+            height: 96px;
+        }
     }
 }
 
@@ -61,16 +76,30 @@ a {
 .footer {
     background-color:#353535;
     padding: 25px 0 15px 20px;
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+        padding: 45px 0 20px 20px;
+    }
     h1 {
         font-family: 'Shrikhand', serif;
         color: white;
         font-size: 20px;
         font-weight: 400;
         margin-bottom: 20px;
+        @media (min-width: 768px) {
+            padding: 0 20px 0 50px;
+            margin-bottom: 0;
+        }
     }
     &__links {
         list-style-type: none;
         padding-left: 1px;
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 15px;
+        }
         &--li {
             display: flex;
             margin-bottom: 10px;
@@ -83,6 +112,11 @@ a {
             &:nth-child(-n+2) a {
                 font-weight: 500;
               }
+            &:nth-child(2) a {
+                @media (min-width: 768px) {
+                    padding-right: 22px;
+                }
+            }
             a {
                 color: white;
                 font-weight: 400;

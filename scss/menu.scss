@@ -4,6 +4,13 @@
     animation: slide 500ms ease-out forwards;
 }
 
+.querie__flexcenter {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 .header {
     position: relative;
@@ -13,6 +20,9 @@
         margin-left: 20px;
         color: #353535;
         font-size: 20px;
+        @media (min-width: 768px) {
+            margin-top: 38px;
+        }
     }
 }
 
@@ -23,6 +33,10 @@
         height: 250px;
         width: 100%;
         object-fit: cover;
+        @media (min-width: 768px) {
+            width: 1440px;
+            height: 383px;
+        }
     }
     &__title {
         position: absolute;
@@ -31,17 +45,29 @@
         width: 100%;
         border-top-right-radius: 35px;
         border-top-left-radius: 35px;
+        @media (min-width: 768px) {
+            max-width: 1055px;
+            width: 100%;
+            text-align: center;
+        }
         h1 {
             padding: 28px 0 30px 20px;
             font-weight: 400;
             font-family: 'Shrikhand', serif;
             font-size: 28px;
             color: #101010;
+            @media (min-width: 768px) {
+                padding-left: 0;
+                margin-right: 55px;
+            }
         }
         .heart {
             position: absolute;
             top: 84px;
             right: 14px;
+            @media (min-width: 768px) {
+                right: 360px;
+            }
         }
     }
 }
@@ -50,6 +76,10 @@
     padding: 50px 15px 15px 15px;
     padding-left: 15px;
     background-color: var(--menu-bg-color);
+    @media (min-width: 768px) {
+        max-width: 1055px;
+        width: 100%;
+    }
     p {
         font-size: 13px;
         font-weight: 400;
@@ -253,3 +283,6 @@
         opacity: 0;
     }
 }
+
+
+
