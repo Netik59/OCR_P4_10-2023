@@ -93,13 +93,22 @@
   font-size: 13px;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  .menu p {
+    font-size: 15px;
+  }
+}
 .menu h2 {
   font-size: 16px;
   font-weight: 300;
 }
 .menu h3 {
   font-size: 15.5px;
-  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .menu h3 {
+    font-size: 18px;
+  }
 }
 .menu__entrees--text {
   border-bottom: 3px solid var(--card-hover-color);
@@ -144,6 +153,11 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+  .menu .card:hover p, .menu .card:hover h3 {
+    max-width: 1000px;
+  }
 }
 .menu .card:not(:hover) .card__checked--price {
   animation: price-anim-reverse 600ms forwards;

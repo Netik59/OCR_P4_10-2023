@@ -86,6 +86,9 @@
     p {
         font-size: 13px;
         font-weight: 400;
+        @media (min-width: 768px) {
+            font-size: 15px;
+        }
     }
     h2 {
         font-size: 16px;
@@ -93,8 +96,9 @@
     }
     h3 {
         font-size: 15.5px;
-        
-        white-space: nowrap;
+        @media (min-width: 768px) {
+            font-size: 18px;
+        }
     }
     &__entrees--text {
         border-bottom: 3px solid var(--card-hover-color);
@@ -135,6 +139,9 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                @media (min-width: 768px) {
+                    max-width: 1000px;
+                }
             }
         }
         &:not(:hover) {
