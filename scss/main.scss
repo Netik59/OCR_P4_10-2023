@@ -138,8 +138,8 @@ a {
     }
 .full-heart {
     background-image: linear-gradient(0deg, #9456DC, #FF79DB);
-    -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
     background-clip: text;
+    -webkit-background-clip: text; /* Pour les navigateurs basés sur WebKit */
     color: transparent;
     opacity: 0;
     }
