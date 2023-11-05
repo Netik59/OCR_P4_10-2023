@@ -70,6 +70,11 @@
     font-size: 22px;
   }
 }
+@media (min-width: 325px) and (max-width: 369px) {
+  .intro__title h1 {
+    padding: 28px 0 30px 10px;
+  }
+}
 .intro__title .heart {
   position: absolute;
   top: 84px;
@@ -85,6 +90,11 @@
 @media (min-width: 370px) and (max-width: 400px) {
   .intro__title .heart {
     top: 80px;
+  }
+}
+@media (min-width: 325px) and (max-width: 369px) {
+  .intro__title .heart {
+    right: -10px;
   }
 }
 
@@ -142,12 +152,13 @@
     transition: max-width 400ms ease;
   }
 }
-@media (max-width: 369px) {
+@media (min-width: 325px) and (max-width: 369px) {
   .menu p, .menu h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 165px;
+    max-width: 100%;
+    transition: max-width 400ms ease;
   }
 }
 .menu__entrees--text {
@@ -208,6 +219,11 @@
     max-width: 215px;
   }
 }
+@media (min-width: 325px) and (max-width: 369px) {
+  .menu .card:hover p, .menu .card:hover h3 {
+    max-width: 180px;
+  }
+}
 .menu .card:not(:hover) .card__checked--price {
   animation: price-anim-reverse 600ms forwards;
 }
@@ -238,6 +254,11 @@
 @media (min-width: 370px) and (max-width: 400px) {
   .menu .card__checked--price {
     margin-right: -25px;
+  }
+}
+@media (min-width: 325px) and (max-width: 369px) {
+  .menu .card__checked--price {
+    margin-left: -54px;
   }
 }
 .menu .card__checked--selected {

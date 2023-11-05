@@ -63,7 +63,10 @@
             }
             @media (min-width: 370px) and (max-width: 400px) {
                 font-size: 22px;
-              }
+            }
+            @media (min-width: 325px) and (max-width: 369px) {
+                padding: 28px 0 30px 10px;
+            }
         }
         .heart {
             position: absolute;
@@ -76,6 +79,9 @@
             }
             @media (min-width: 370px) and (max-width: 400px) {
                 top: 80px;
+            }
+            @media (min-width: 325px) and (max-width: 369px) {
+                right: -10px;
               }
         }
     }
@@ -123,11 +129,12 @@
             max-width: 100%; 
             transition: max-width 400ms ease; 
           }
-          @media (max-width: 369px) {
+          @media (min-width: 325px) and (max-width: 369px) {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 165px; 
+            max-width: 100%;
+            transition: max-width 400ms ease; 
           }
     }
     &__entrees--text {
@@ -161,7 +168,6 @@
                 @media (min-width: 370px) and (max-width: 400px) {
                     animation: price-anim-small 600ms forwards;
                 }
-                
             }
 
             .card__checked--selected {
@@ -177,7 +183,10 @@
                 }
                 @media (min-width: 370px) and (max-width: 400px) {
                     max-width: 215px;
-                  }
+                }
+                @media (min-width: 325px) and (max-width: 369px) {
+                    max-width: 180px;
+                }
             }
         }
         &:not(:hover) {
@@ -209,7 +218,11 @@
                 font-size: 15px;
                 @media (min-width: 370px) and (max-width: 400px) {
                     margin-right: -25px;
-                  }
+                }
+                  
+                @media (min-width: 325px) and (max-width: 369px) {
+                    margin-left: -54px;
+                }
                 
             }
             &--selected {
