@@ -65,7 +65,7 @@
     margin-right: 55px;
   }
 }
-@media (min-width: 320px) and (max-width: 420px) {
+@media (min-width: 370px) and (max-width: 400px) {
   .intro__title h1 {
     font-size: 22px;
   }
@@ -82,7 +82,7 @@
     margin-left: 30px;
   }
 }
-@media (min-width: 320px) and (max-width: 420px) {
+@media (min-width: 370px) and (max-width: 400px) {
   .intro__title .heart {
     top: 80px;
   }
@@ -108,6 +108,14 @@
     font-size: 15px;
   }
 }
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu p {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 .menu h2 {
   font-size: 16px;
   font-weight: 300;
@@ -118,6 +126,20 @@
 @media (min-width: 768px) {
   .menu h3 {
     font-size: 18px;
+  }
+}
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu h3 {
+    font-size: 17px;
+  }
+}
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu p, .menu h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    transition: max-width 400ms ease;
   }
 }
 .menu__entrees--text {
@@ -155,6 +177,11 @@
 .menu .card:hover .card__checked--price {
   animation: price-anim 600ms forwards;
 }
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu .card:hover .card__checked--price {
+    animation: price-anim-small 600ms forwards;
+  }
+}
 .menu .card:hover .card__checked--selected {
   animation: check-anim 600ms forwards;
 }
@@ -168,21 +195,18 @@
     max-width: 1000px;
   }
 }
-@media (min-width: 320px) and (max-width: 420px) {
+@media (min-width: 370px) and (max-width: 400px) {
   .menu .card:hover p, .menu .card:hover h3 {
-    max-width: 156px;
-  }
-}
-@media (min-width: 320px) and (max-width: 420px) {
-  .menu .card p, .menu .card h3 {
-    max-width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 215px;
   }
 }
 .menu .card:not(:hover) .card__checked--price {
   animation: price-anim-reverse 600ms forwards;
+}
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu .card:not(:hover) .card__checked--price {
+    animation: price-anim-reverse-small 600ms forwards;
+  }
 }
 .menu .card:not(:hover) .card__checked--selected {
   animation: check-anim-reverse 600ms forwards;
@@ -202,6 +226,11 @@
   margin-top: 20px;
   font-weight: 700;
   font-size: 15px;
+}
+@media (min-width: 370px) and (max-width: 400px) {
+  .menu .card__checked--price {
+    margin-right: -25px;
+  }
 }
 .menu .card__checked--selected {
   transform-origin: right;
@@ -369,6 +398,14 @@ h2:nth-child(14),
     transform: translateX(0%);
   }
 }
+@keyframes price-anim-small {
+  0% {
+    transform: translateX(115%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes check-anim {
   0% {
     transform: scaleX(0);
@@ -386,6 +423,14 @@ h2:nth-child(14),
   }
   100% {
     transform: translateX(220%);
+  }
+}
+@keyframes price-anim-reverse-small {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(115%);
   }
 }
 @keyframes check-anim-reverse {
