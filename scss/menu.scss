@@ -120,8 +120,14 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 100%; // Remplacez 200px par la valeur par défaut souhaitée
-            transition: max-width 400ms ease; // Ajustez la durée de la transition selon vos préférences
+            max-width: 100%; 
+            transition: max-width 400ms ease; 
+          }
+          @media (max-width: 369px) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 165px; 
           }
     }
     &__entrees--text {
